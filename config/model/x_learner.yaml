@@ -1,0 +1,6 @@
+# T-learner의 반대 그룹 예측으로 개인별 효과를 대치한 뒤 다시 학습, propensity로 가중 평균
+name: X-learner
+estimator:
+  _target_: causalml.inference.meta.BaseXClassifier
+  outcome_learner: ${learners.classifier}
+  effect_learner: ${learners.regressor}

@@ -1,0 +1,5 @@
+# 관측 데이터: 마케터가 활동 많은 유저에게 쿠폰을 몰아줌
+defaults:
+  - randomized
+
+confounded: true

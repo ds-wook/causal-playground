@@ -1,0 +1,7 @@
+alpha: 0.05
+treatment_col: treatment
+outcome_col: purchase
+
+# 관측 가능한 피처로 쪼갤 구간 (가입 일수)
+tenure_bins: [0, 180, 730, 3650]
+tenure_labels: ["<6m", "6m-2y", "2y+"]

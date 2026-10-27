@@ -1,0 +1,5 @@
+# 처치 여부를 피처 하나로 넣은 단일 모델: μ(x, t) → τ(x) = μ(x, 1) - μ(x, 0)
+name: S-learner
+estimator:
+  _target_: causalml.inference.meta.BaseSClassifier
+  learner: ${learners.classifier}

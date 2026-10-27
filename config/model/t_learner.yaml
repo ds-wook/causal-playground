@@ -1,0 +1,5 @@
+# 그룹별로 따로 학습: τ(x) = μ1(x) - μ0(x)
+name: T-learner
+estimator:
+  _target_: causalml.inference.meta.BaseTClassifier
+  learner: ${learners.classifier}

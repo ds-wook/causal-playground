@@ -1,0 +1,18 @@
+# meta-learner 안에서 쓰는 기본 학습기
+classifier:
+  _target_: xgboost.XGBClassifier
+  n_estimators: 300
+  max_depth: 4
+  learning_rate: 0.05
+  subsample: 0.8
+  random_state: 42
+  n_jobs: -1
+
+regressor:
+  _target_: xgboost.XGBRegressor
+  n_estimators: 300
+  max_depth: 4
+  learning_rate: 0.05
+  subsample: 0.8
+  random_state: 42
+  n_jobs: -1

@@ -1,0 +1,15 @@
+defaults:
+  - data: randomized
+  - analysis: ab_test
+  - learners: xgboost
+  - model: x_learner
+  - _self_
+
+uplift:
+  features: [visits_30d, past_spend, tenure_days, is_mobile]
+  test_size: 0.3
+  seed: 42
+
+hydra:
+  run:
+    dir: outputs/${now:%Y-%m-%d}/${now:%H-%M-%S}

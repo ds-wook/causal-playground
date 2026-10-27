@@ -1,0 +1,8 @@
+# 결과·처치에서 x로 설명되는 부분을 빼고(residual) 남은 관계로 τ(x)를 학습
+name: R-learner
+estimator:
+  _target_: causalml.inference.meta.BaseRClassifier
+  outcome_learner: ${learners.classifier}
+  effect_learner: ${learners.regressor}
+  n_fold: 5
+  random_state: 42
